@@ -1,10 +1,9 @@
 import pickle
 from flask import Flask, render_template, request
-from flask_bootstrap import Bootstrap
 import numpy as np
 
 app = Flask(__name__)
-Bootstrap(app)
+
 
 
 @app.route('/')
@@ -24,7 +23,7 @@ def contact():
 def car_regression():
     try:
         if request.method == "POST":
-            model_car = pickle.load(open("static/model_plk/model_car.pkl", "rb"))
+            model_car = pickle.load(open("model_car.pkl", "rb"))
             int_features = [float(x) for x in request.form.values()]
             final_features = [np.array(int_features)]
             prediction = model_car.predict(final_features)
@@ -41,7 +40,7 @@ def iris_classification():
     try:
         variety_mappings = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
         if request.method == "POST":
-            model_iris = pickle.load(open("static/model_plk/model_iris.pkl", "rb"))
+            model_iris = pickle.load(open("model_iris.pkl", "rb"))
             float_features = [float(x) for x in request.form.values()]
             final_features = [np.array(float_features)]
             prediction = variety_mappings[model_iris.predict(final_features)[0]]  # Retrieve from dictionary

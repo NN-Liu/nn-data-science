@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('static/csv/iris.csv')
+dataset = pd.read_csv('csv/iris.csv')
 
 # Mapping varieties to dictionary
 variety_mappings = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}

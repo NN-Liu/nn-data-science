@@ -7,7 +7,7 @@ import pickle
 import tensorflow as tf
 
 # Importing the dataset
-dataset = pd.read_csv('static/csv/bank_ann.csv')
+dataset = pd.read_csv('csv/bank_ann.csv')
 X = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
@@ -34,7 +34,6 @@ X = sc.fit_transform(X)
 
 
 # Importing the Keras libraries and packages
-import keras
 from keras.models import Sequential
 from keras.layers import Dense
 
