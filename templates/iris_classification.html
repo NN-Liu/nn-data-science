@@ -1,0 +1,35 @@
+{% include "header.html" %}
+
+    <div class="py-5 text-center container form-control bg-light">
+        <form action="{{url_for('iris_classification')}}" method="post">
+                <h4>Iris Flower Classification</h4>
+                <div class="mb-3">
+                   <input class="form-control" placeholder="Sepal Length (0.1-10)" type="number"  step='0.01' min="0.1" max="10" name="slen" id="slen">
+                </div>
+
+                <div class="mb-3">
+                   <input class="form-control"  placeholder="Sepal Width (0.1-6)" type="number" step='0.01' min="0.1" max="6" name="swid" id="swid">
+                </div>
+
+                <div class="mb-3">
+                   <input class="form-control" placeholder="Petal Length (0.1-10)" type="number"  step='0.01' min="0.1" max="10" name="plen" id="plen">
+                </div>
+                <div class="mb-3">
+
+                 <input class="form-control" placeholder="Petal Width (0.1-5)" type="number" step='0.01' min="0.1" max="5" name="pwid" id="pwid">
+
+                </div>
+                    <button type="submit" value = "submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+           <br>
+        <br>
+        <p>{{prediction}}</p>
+</div>
+
+
+
+
+
+{% include "footer.html" %}

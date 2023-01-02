@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+
+  <div class="container px-4 py-5 my-5 text-center form-control" style="background-color: #bee1e6">
+      <h1>Contact Me</h1>
+      <br>
+<form action="https://formsubmit.co/xilouli@gmail.com" method="POST">
+
+	<div class="mb-3">
+
+    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required
+		   data-validation-required-message="Please enter your name." >
+  </div>
+
+  <div class="mb-3">
+    <input type="email" class="form-control" placeholder="Email" id="email" required
+		   data-validation-required-message="Please enter your email.">
+  </div>
+
+	<div class="mb-3">
+		<textarea class="form-control" id="message" name="message" placeholder="Message" rows="6" required
+									data-validation-required-message="Please enter a message."></textarea>
+    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+
+
+
+{% include "footer.html" %}
