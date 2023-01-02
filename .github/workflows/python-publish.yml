@@ -10,10 +10,7 @@ name: nn website
 
 on:
   push:
-    branches: 'master'
-
-  release:
-    types: 'published'
+  pull_request:
 
 permissions:
   contents: read
@@ -36,7 +33,7 @@ jobs:
     - name: Build package
       run: python -m build
     - name: Publish a Python distribution to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1.0
+      uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: X_lou10-.1
         password: ${{ secrets.PYPI_API_TOKEN }}
