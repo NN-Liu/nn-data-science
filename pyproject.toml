@@ -1,4 +1,13 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-[tool.setuptools]
-py-modules = []
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nn-web"
+description = "My machine learning web"
+version = "2023.1"
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Flask",
+    "Programming Language :: Python :: 3",
+]
