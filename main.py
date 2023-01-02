@@ -2,7 +2,6 @@ import pickle
 from flask import Flask, render_template, request
 from flask_bootstrap import Bootstrap
 import numpy as np
-import setuptools
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -58,6 +57,5 @@ def bank_ann():
     return render_template("bank_ann.html")
 
 if __name__ == "__main__":
-    setuptools.setup()
     app.run(host = '0.0.0.0',port = 5000)
 
