@@ -19,7 +19,7 @@ classifier = SVC(kernel = 'rbf', random_state = 1)
 classifier.fit(X, y)
 
 #Saving model to current directory
-pickle.dump(classifier, open("static/model_plk/model_iris.pkl", "wb"))
+pickle.dump(classifier, open("model_iris.pkl", "wb"))
 
 # Loading model to compare results
-model = pickle.load(open("static/model_plk/model_iris.pkl", "rb"))
+model = pickle.load(open("model_iris.pkl", "rb"))

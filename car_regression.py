@@ -15,8 +15,8 @@ regressor = LinearRegression()
 regressor.fit(X, y)
 
 # Saving model to current directory
-pickle.dump(regressor, open("static/model_plk/model_car.pkl", "wb"))
+pickle.dump(regressor, open("model_car.pkl", "wb"))
 
 # Loading model to compare results
-model = pickle.load(open("static/model_plk/model_car.pkl", "rb"))
+model = pickle.load(open("model_car.pkl", "rb"))
 
