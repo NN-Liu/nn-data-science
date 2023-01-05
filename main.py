@@ -28,9 +28,9 @@ def car_regression():
             final_features = [np.array(int_features)]
             prediction = model_car.predict(final_features)
             output = round(prediction[0], 2)
-            return render_template("car_regression.html", output=f"The price for used Honda car is {output}")
         else:
-            return render_template("car_regression.html", output="")
+            output = ""
+        return render_template("car_regression.html", output= output)
     except:
         return "An error has incurred."
 
@@ -44,10 +44,10 @@ def iris_classification():
             float_features = [float(x) for x in request.form.values()]
             final_features = [np.array(float_features)]
             prediction = variety_mappings[model_iris.predict(final_features)[0]]  # Retrieve from dictionary
-            print(prediction)
-            return render_template("iris_classification.html", prediction=f"The flower is {prediction}")
+
         else:
-            return render_template("iris_classification.html", prediction="")
+            prediction = ""
+        return render_template("iris_classification.html", prediction=prediction)
     except:
         return "An error has incurred."
 
