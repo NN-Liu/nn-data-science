@@ -22,11 +22,11 @@ def contact():
 @app.route('/car_regression', methods=["GET", "POST"])
 def car_regression():
     try:
-        if request.method == "POST":
             model_car = pickle.load(open("model_car.pkl", "rb"))
             int_features = [float(x) for x in request.form.values()]
             final_features = [np.array(int_features)]
             prediction = model_car.predict(final_features)
+        if request.method == "POST":
             output = round(prediction[0], 2)
         else:
             output = ""
