@@ -38,11 +38,11 @@ def car_regression():
 @app.route('/iris_classification', methods=["GET", "POST"])
 def iris_classification():
     try:
-        variety_mappings = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-        if request.method == "POST":
+            variety_mappings = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
             model_iris = pickle.load(open("model_iris.pkl", "rb"))
             float_features = [float(x) for x in request.form.values()]
             final_features = [np.array(float_features)]
+        if request.method == "POST":
             prediction = variety_mappings[model_iris.predict(final_features)[0]]  # Retrieve from dictionary
 
         else:
