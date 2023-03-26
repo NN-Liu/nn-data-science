@@ -1,89 +1,123 @@
-{% include "header.html" %}
-
-
-<div class="container px-4 py-5 my-5 text-center" style="background-color: #fde2e4">
-   <img class="d-block mx-auto mb-4" src="static/assets/img/avatar.png" alt="" width="150" height="150">
-    <h1 class="display-5 fw-bold">Hi, I am Niannian.</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">I am a data scientist and developer.</p>
-    </div>
-</div>
-
-<div class="container py-5 text-center container" style="background-color: #dfe7fd">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Data Science Models</h1>
-        <p class="lead text-muted">List of simple examples for data science.</p>
-      </div>
-    </div>
-</div>
-
-
-
-  <div class=" container album py-5 bg-light">
-
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" width="100%" height="225" src="static/assets/img/submarine.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/>
-              <div class="card-body">
-                <div class = "card-title">
-                  <h6 class = "card-text">Regression</h6>
-                  <p class="card-text">This is a simple linear regression model used for predicting used car prices.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="car_regression"><button type="button" class="btn btn-sm btn-info">View</button></a>
-                      </div>
-                    </div>
-                  </div>
+{% extends 'base.html'%}
+{%include 'header.html'%}
+{% block main%}
+<!-- Masthead-->
+        <div class="masthead bg-primary text-white text-center" >
+            <div class="container d-flex align-items-center flex-column" >
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="static/assets/img/avataaars.png" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Hi, I am Niannian.</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
-              </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Data Scientist - Software Developer </p>
             </div>
-
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" width="100%" height="225" src="static/assets/img/cabin.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/>
-              <div class="card-body">
-                <div class = "card-title">
-                  <h6 class = "card-text">Classification</h6>
-                  <p class="card-text">This is a simple classification model used for predicting Iris flower.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="iris_classification"><button type="button" class="btn btn-sm btn-info">View</button></a>
-                      </div>
-                    </div>
-                  </div>
+        </div>
+<!-- Portfolio Section-->
+        <div class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
                 </div>
-              </div>
-            </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" width="100%" height="225" src="static/assets/img/safe.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/>
-              <div class="card-body">
-                <div class = "card-title">
-                  <h6 class = "card-text">Artificial Neural Network</h6>
-                  <p class="card-text">This is an ANN model used for predicting customer retaintion for banks.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="bank_ann"><button type="button" class="btn btn-sm btn-info">View</button></a>
-                      </div>
-                    </div>
-                  </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
-              </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="btn-group">
+                                <a href="car_regression"><button type="button" class="btn btn-sm btn-info">Simple Regression</button></a>
+                            </div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+
+                            </div>
+
+                            <img class="img-fluid" src="static/assets/img/cabin.png" alt="..."/>
+
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="btn-group">
+                                <a href="iris_classification"><button type="button" class="btn btn-sm btn-info">Classification</button></a>
+                                </div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/assets/img/cake.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="btn-group">
+                                    <a href="bank_ann"><button type="button" class="btn btn-sm btn-info">ANN</button></a>
+                                </div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/assets/img/circus.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                  <div class="btn-group">
+                                    <a href="image_cnn"><button type="button" class="btn btn-sm btn-info">CNN</button></a>
+                                </div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/assets/img/game.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                     <div class="btn-group">
+                                    <a href="stock_price_rnn"><button type="button" class="btn btn-sm btn-info">RNN</button></a>
+                                </div>
+
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/assets/img/safe.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                 <div class="btn-group">
+                                    <a href="nlp"><button type="button" class="btn btn-sm btn-info">RNN</button></a>
+                                </div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="static/assets/img/submarine.png" alt="..." />
+                        </div>
+                    </div>
+                </div>
             </div>
-
-</div>
-</div>
-
-
-
-
+        </div>
+{%include 'about.html'%}
+{%include 'contact.html'%}
+{%include 'footer.html'%}
+{%endblock%}
 
 
-
-{% include "footer.html" %}
 
 
 

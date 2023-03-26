@@ -1,30 +1,38 @@
-{% include "header.html" %}
+
+<div class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <form action="https://formsubmit.co/xilouli@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" required
+                           data-validation-required-message="Please enter your name." >
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" id="email" required
+                           data-validation-required-message="Please enter your email.">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="Message" rows="6" required
+                                                    data-validation-required-message="Please enter a message."></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-center">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+</div>
 
 
-  <div class="container px-4 py-5 my-5 text-center form-control" style="background-color: #bee1e6">
-      <h1>Contact Me</h1>
-      <br>
-<form action="https://formsubmit.co/xilouli@gmail.com" method="POST">
-
-	<div class="mb-3">
-
-    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required
-		   data-validation-required-message="Please enter your name." >
-  </div>
-
-  <div class="mb-3">
-    <input type="email" class="form-control" placeholder="Email" id="email" required
-		   data-validation-required-message="Please enter your email.">
-  </div>
-
-	<div class="mb-3">
-		<textarea class="form-control" id="message" name="message" placeholder="Message" rows="6" required
-									data-validation-required-message="Please enter a message."></textarea>
-    </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    </div>
-
-
-
-{% include "footer.html" %}

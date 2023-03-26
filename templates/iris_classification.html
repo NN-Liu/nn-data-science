@@ -1,35 +1,53 @@
 {% include "header.html" %}
+<div class="page-section" >
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <br>
+                <br>
+                <h2 class="page-section-heading text-secondary d-inline-block mb-0">Iris Flower Classification</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
 
-    <div class="py-5 text-center container form-control bg-light">
+            <!-- Problem Description-->
+            <div>
+                <h4>Problem Description</h4>
+                <p>This is the classic iris classification problem based on size of sepals and petals. </p>
+                <p>We use Kernel SVM classifier to train data.</p>
+            </div>
         <form action="{{url_for('iris_classification')}}" method="post">
-                <h4>Iris Flower Classification</h4>
-                <div class="mb-3">
+            <br>
+                 <div class="form-group">
                    <input class="form-control" placeholder="Sepal Length (0.1-10)" type="number"  step='0.01' min="0.1" max="10" name="slen" id="slen">
                 </div>
 
-                <div class="mb-3">
+                 <div class="form-group">
                    <input class="form-control"  placeholder="Sepal Width (0.1-6)" type="number" step='0.01' min="0.1" max="6" name="swid" id="swid">
                 </div>
 
-                <div class="mb-3">
+                <div class="form-group">
                    <input class="form-control" placeholder="Petal Length (0.1-10)" type="number"  step='0.01' min="0.1" max="10" name="plen" id="plen">
                 </div>
-                <div class="mb-3">
+                 <div class="form-group">
 
                  <input class="form-control" placeholder="Petal Width (0.1-5)" type="number" step='0.01' min="0.1" max="5" name="pwid" id="pwid">
 
                 </div>
+             <div class="form-group text-center">
                     <button type="submit" value = "submit" class="btn btn-primary">Submit</button>
 
-
-</form>
+             </div>
+        </form>
            <br>
         <br>
-        <h5>{{prediction}}</h5>
+        <h5 class="form-group text-center">{{prediction}}</h5>
+        </div>
+
 </div>
-
-
-
-
 
 {% include "footer.html" %}
