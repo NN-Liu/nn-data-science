@@ -18,22 +18,24 @@
                     <h4>Problem Description</h4>
                     <p>This is a simplified version of used card datasheet which only takes year and mileage as inputs and return the predicted price for the used car.</p>
                 </div>
-    <form action="{{url_for('car_regression_result')}}" method = "post">
-        <br>
-        <div class="form-group">
-            <input type="number" min="1000" max="300000" name="mileage" class="form-control" placeholder="Mileage" id="mileage" required>
-        </div>
-        <div class="form-group">
-            <input type="number" min="2000" max="2023" name="year" class="form-control" placeholder="Year" id="year" required>
-        </div>
-        <div class="form-group text-center">
-    <button type="submit" value = "submit" class="btn btn-primary">Submit</button>
+                <form action="{{url_for('car_regression_result')}}" method = "post">
+                    <br>
+                    <div class="form-group">
+                        <input type="number" min="1000" max="300000" name="mileage" class="form-control" placeholder="Mileage" id="mileage" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" min="2000" max="2023" name="year" class="form-control" placeholder="Year" id="year" required>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" value = "submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
             </div>
-
-
-</form>
         <br>
         <br>
-    </div>
+
+              <h5 class="form-group text-center">{{output}}</h5>
+
 </div>
 {% include "footer.html" %}
